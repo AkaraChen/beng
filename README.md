@@ -1,6 +1,8 @@
 # Beng
 
-<p style="font-size: 128px; user-select: none; font-weight: 900" align="center">绷</p>
+<div align="center">
+    ![](assets/beng.svg)
+</div>
 
 A preset for rollup.
 
