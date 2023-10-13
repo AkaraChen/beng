@@ -1,7 +1,7 @@
 # Beng
 
 <div align="center">
-    ![](assets/beng.svg)
+    <img src="./assets/beng.svg" />
 </div>
 
 A preset for rollup.
