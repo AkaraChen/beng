@@ -5,15 +5,26 @@ export interface IExtension<T> {
 
 export type ExtensionConfig<T> = boolean | T;
 
-export const defineExtensionConfig = <T>(
+export function defineExtensionConfig<T>(
 	options: ExtensionConfig<T>,
 	defaultOptions: T,
-): T => {
+): T {
 	if (typeof options === 'boolean') {
+		console.log('options is boolean', defaultOptions);
 		return defaultOptions;
 	}
 	return options;
-};
+}
+
+export function defineExtensionCreater<T>(name: string, defaultOptions: T) {
+	return function createExtension(options: ExtensionConfig<T>) {
+		if (!options) return undefined;
+		return {
+			name,
+			options: defineExtensionConfig(options, defaultOptions),
+		};
+	};
+}
 
 export async function createRollupPlugin<T>(plugin: IExtension<T>) {
 	const { name, options } = plugin;
