@@ -1,4 +1,4 @@
-import { BengConfig } from '@/types';
+import { BengConfig } from '../types';
 import { defineTypeScriptExtension } from './typescript';
 import { defineCommonjsExtension } from './commonjs';
 

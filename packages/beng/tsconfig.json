@@ -3,9 +3,12 @@
         "module": "ES2022",
         "moduleResolution": "Bundler",
         "paths": {
-            "@/*": ["./src/*"],
+            "@/*": [
+                "./src/*"
+            ],
         },
         "declaration": true,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "target": "ES2022"
     }
 }

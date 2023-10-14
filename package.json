@@ -1,5 +1,6 @@
 {
-  "name": "@akrc/beng",
+  "name": "beng",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -8,32 +9,12 @@
     "fmt": "biome format --write ./",
     "build": "rollup -c ./rollup.config.mjs"
   },
-  "bin": {
-    "beng": "./bin/bundle.ts"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@rollup/plugin-commonjs": "^25.0.5",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.5",
-    "consola": "^3.2.3",
-    "ramda": "^0.29.1",
-    "rollup": "^4.0.2",
-    "slash": "^5.1.0",
-    "tslib": "^2.6.2",
-    "tsx": "^3.13.0"
-  },
   "devDependencies": {
     "@biomejs/biome": "^1.2.2",
     "@types/node": "^20.8.5",
     "@types/ramda": "^0.29.6"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
   }
 }

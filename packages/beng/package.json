@@ -1,0 +1,31 @@
+{
+  "name": "@akrc/beng",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c ./rollup.config.mjs"
+  },
+  "bin": {
+    "beng": "./bin/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^25.0.5",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "consola": "^3.2.3",
+    "ramda": "^0.29.1",
+    "rollup": "^4.0.2",
+    "slash": "^5.1.0",
+    "tslib": "^2.6.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
