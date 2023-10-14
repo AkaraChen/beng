@@ -1,4 +1,4 @@
-import { BengConfig } from '../types';
+import { BengConfig } from '@/types';
 import slash from 'slash';
 import path from 'path';
 import fs from 'fs';

@@ -1,7 +1,7 @@
 import { RollupOptions } from 'rollup';
 import { BengConfig } from '..';
 import path from 'path';
-import { resolvePlugin } from '../extension';
+import { resolvePlugin } from '@/extension';
 
 const wd = process.cwd();
 
