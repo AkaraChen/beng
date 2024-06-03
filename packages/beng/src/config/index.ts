@@ -1,24 +1,22 @@
 import { BengConfig } from "@/types";
-import slash from "slash";
-import path from "path";
-import fs from "fs";
-import consola from "consola";
+import { loadConfig } from "c12";
 
-const wd = process.cwd();
-export const configFilePath = slash(path.resolve(wd, "beng.config.mjs"));
-
-export function formatImportPath(path: string) {
-	if (process.platform === "win32") {
-		return `file://${slash(path)}`;
-	}
-	return path;
-}
+const cwd = process.cwd();
 
 export async function resolveBengConfig(): Promise<BengConfig> {
-	if (!fs.existsSync(configFilePath)) {
-		return {};
-	}
-	consola.info(`Using config file: ${configFilePath}`);
-	const module = await import(formatImportPath(configFilePath));
-	return module.default;
+	const resolved = await loadConfig<BengConfig>({
+		configFile: "beng.config",
+		rcFile: ".bengrc",
+		dotenv: true,
+		packageJson: true,
+		defaultConfig: {
+			typescript: {},
+			commonjs: {},
+		},
+		extend: {
+			extendKey: "extends",
+		},
+		cwd,
+	});
+	return resolved.config;
 }

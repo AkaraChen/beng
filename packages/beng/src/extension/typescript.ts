@@ -9,7 +9,6 @@ export const typescript: IExtension<RollupTypescriptOptions> = {
 		const { cwd } = ctx;
 		const tsconfig = path.join(cwd, "tsconfig.json");
 		if (existsSync(tsconfig)) {
-			console.log("tsconfig.json exists");
 			return {
 				tsconfig,
 				outDir: path.join(cwd, "dist"),

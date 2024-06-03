@@ -18,9 +18,10 @@ export async function applyExtension<T>(
 	extension: IExtension<T>,
 	context: IContext,
 	userConfig: T,
-) {
+): Promise<Plugin> {
 	const defaults = extension.resolveDefaults(context);
-	const config = defu(userConfig, defaults);
+	const config =
+		typeof userConfig === "boolean" ? defaults : defu(userConfig, defaults);
 	const module = await extension.importer();
 	return module.default(config);
 }
