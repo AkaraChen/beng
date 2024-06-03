@@ -1,19 +1,23 @@
-import { BengConfig } from '@/types';
-import { defineTypeScriptExtension } from './typescript';
-import { defineCommonjsExtension } from './commonjs';
-import { IExtension, createRollupPlugin } from './config';
+import { BengConfig } from "@/types";
+import { commonjs } from "./commonjs";
+import { typescript } from "./typescript";
+import { IExtension, applyExtension } from "./config";
 
 export async function resolvePlugin(config: BengConfig) {
-	const { typescript = true, commonjs } = config;
 	const plugins = [];
-	function applyExtension(extension: IExtension<any>) {
-		plugins.push(createRollupPlugin(extension));
+	function addPlugin(extension: IExtension<any>) {
+		const plugin = applyExtension(
+			extension,
+			{ cwd: process.cwd(), isDev: true },
+			true,
+		);
+		plugins.push(plugin);
 	}
-	if (typescript) {
-		applyExtension(defineTypeScriptExtension(typescript));
+	if (config.typescript) {
+		addPlugin(typescript);
 	}
-	if (commonjs) {
-		applyExtension(defineCommonjsExtension(commonjs));
+	if (config.commonjs) {
+		addPlugin(commonjs);
 	}
 	return plugins;
 }

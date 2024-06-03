@@ -1,33 +1,26 @@
+import { Plugin } from "rollup";
+import { defu } from "defu";
+
+export interface IContext {
+	cwd: string;
+	isDev: boolean;
+}
+
+export type ExtensionConfig<T> = T | boolean;
+
 export interface IExtension<T> {
 	name: string;
-	options: T;
+	resolveDefaults: (context: IContext) => T;
+	importer?: () => Promise<any>;
 }
 
-export type ExtensionConfig<T> = boolean | T;
-
-export function defineExtensionConfig<T>(
-	options: ExtensionConfig<T>,
-	defaultOptions: T,
-): T {
-	if (typeof options === 'boolean') {
-		console.log('options is boolean', defaultOptions);
-		return defaultOptions;
-	}
-	return options;
-}
-
-export function defineExtensionCreater<T>(name: string, defaultOptions: T) {
-	return function createExtension(options: ExtensionConfig<T>) {
-		if (!options) return undefined;
-		return {
-			name,
-			options: defineExtensionConfig(options, defaultOptions),
-		};
-	};
-}
-
-export async function createRollupPlugin<T>(plugin: IExtension<T>) {
-	const { name, options } = plugin;
-	const pluginModule = await import(name);
-	return pluginModule.default(options);
+export async function applyExtension<T>(
+	extension: IExtension<T>,
+	context: IContext,
+	userConfig: T,
+) {
+	const defaults = extension.resolveDefaults(context);
+	const config = defu(userConfig, defaults);
+	const module = await extension.importer();
+	return module.default(config);
 }

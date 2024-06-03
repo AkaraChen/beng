@@ -1,8 +1,8 @@
-import { resolveBengConfig } from '@/config';
-import * as rollup from 'rollup';
-import { toArray } from '@/utils/array';
-import consola from 'consola';
-import { toRollup } from '@/config/transform';
+import { resolveBengConfig } from "@/config";
+import * as rollup from "rollup";
+import { toArray } from "@/utils/array";
+import consola from "consola";
+import { toRollup } from "@/config/transform";
 
 async function main() {
 	const config = await resolveBengConfig();

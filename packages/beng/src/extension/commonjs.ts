@@ -1,5 +1,8 @@
-import { defineExtensionCreater } from './config';
-import type { RollupCommonJSOptions } from '@rollup/plugin-commonjs';
+import type { RollupCommonJSOptions } from "@rollup/plugin-commonjs";
+import { IExtension } from "./config";
 
-export const defineCommonjsExtension =
-	defineExtensionCreater<RollupCommonJSOptions>('@rollup/plugin-commonjs', {});
+export const commonjs: IExtension<RollupCommonJSOptions> = {
+	name: "commonjs",
+	resolveDefaults: () => ({}),
+	importer: () => import("@rollup/plugin-commonjs"),
+};

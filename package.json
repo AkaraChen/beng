@@ -1,20 +1,22 @@
 {
-  "name": "beng",
-  "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "fmt": "biome format --write ./",
-    "build": "turbo build --filter=./packages/**/*"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@biomejs/biome": "^1.2.2",
-    "@types/node": "^20.8.5",
-    "@types/ramda": "^0.29.6"
-  }
+	"name": "beng",
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"fmt": "biome format --write ./",
+		"build": "turbo build --filter=./packages/**/*"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "^1.7.3",
+		"@types/node": "^20.14.0",
+		"@types/ramda": "^0.29.12",
+		"typescript": "^5.4.5"
+	},
+	"packageManager": "pnpm@9.1.2"
 }
