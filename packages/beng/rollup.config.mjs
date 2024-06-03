@@ -10,7 +10,7 @@ const external = Object.keys(dependencies).map(
 
 export default defineConfig([
 	{
-		input: "./index.ts",
+		input: "./src/index.ts",
 		output: {
 			dir: "./dist",
 		},
