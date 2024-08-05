@@ -2,7 +2,10 @@
 	"name": "@bengbu/zhule",
 	"version": "0.0.1",
 	"description": "",
-	"bin": "./index.js",
+	"bin": {
+        "beng": "./index.js"
+    },
+	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -10,6 +13,9 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"execa": "^9.3.0"
+		"@bengbu/core": "^0.0.1",
+		"execa": "^9.3.0",
+		"nypm": "^0.3.9",
+		"rollup": "^4.20.0"
 	}
 }

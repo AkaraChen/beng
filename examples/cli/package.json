@@ -1,0 +1,17 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "beng"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bengbu/core": "^0.0.1",
+    "@bengbu/zhule": "^0.0.1",
+    "rollup": "^4.20.0"
+  }
+}
