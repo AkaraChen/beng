@@ -3,7 +3,7 @@ import { resolveContext } from "./context";
 import { applyFeatures } from "./features/feature";
 import { features } from "./features";
 
-async function main(): Promise<RollupOptions> {
+async function main(): Promise<RollupOptions | RollupOptions[]> {
 	const context = await resolveContext();
 	return applyFeatures(
 		features,

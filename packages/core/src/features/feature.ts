@@ -10,7 +10,7 @@ export async function applyFeatures(
 	features: Feature[],
 	config: Options,
 	context: Context,
-) {
+): Promise<Options | Options[]> {
 	let result = config;
 	for (const feature of features) {
 		result = await feature(result, context);
