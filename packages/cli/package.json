@@ -1,21 +1,32 @@
 {
 	"name": "@bengbu/zhule",
+	"description": "The CLI of bengbu, setup your bundle with only one command.",
 	"version": "0.0.1",
-	"description": "",
-	"bin": {
-        "beng": "./index.js"
-    },
-	"type": "module",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
 	"author": "",
-	"license": "ISC",
+	"bin": {
+		"beng": "./index.js"
+	},
 	"dependencies": {
 		"@bengbu/core": "^0.0.1",
 		"execa": "^9.3.0",
 		"nypm": "^0.3.9",
 		"rollup": "^4.20.0"
-	}
+	},
+	"homepage": "https://github.com/akarachen/beng",
+	"keywords": ["beng", "bengbu", "rollup"],
+	"license": "ISC",
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/akarachen/beng",
+		"directory": "packages/cli"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module"
 }

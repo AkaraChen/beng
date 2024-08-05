@@ -1,19 +1,19 @@
 {
 	"name": "beng",
-	"private": true,
-	"version": "0.0.1",
 	"description": "",
-	"type": "module",
-	"scripts": {
-		"fmt": "biome format --write ./",
-		"build": "turbo build --filter=./packages/**/*"
-	},
-	"keywords": [],
+	"version": "0.0.1",
 	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.3",
 		"@types/node": "^20.14.0"
 	},
-	"packageManager": "pnpm@9.1.4"
+	"keywords": [],
+	"license": "ISC",
+	"packageManager": "pnpm@9.1.4",
+	"private": true,
+	"scripts": {
+		"build": "turbo build --filter=./packages/**/*",
+		"fmt": "biome format --write ./"
+	},
+	"type": "module"
 }

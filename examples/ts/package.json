@@ -1,20 +1,20 @@
 {
 	"name": "ts",
-	"version": "0.0.1",
 	"description": "",
-	"main": "index.js",
-	"type": "module",
-	"scripts": {
-		"build": "rollup -c node:@bengbu/core"
-	},
-	"keywords": [],
+	"version": "0.0.1",
 	"author": "",
-	"license": "ISC",
 	"dependencies": {
 		"@bengbu/core": "workspace:*",
 		"rollup": "^4.20.0"
 	},
 	"devDependencies": {
 		"tslib": "^2.6.3"
-	}
+	},
+	"keywords": [],
+	"license": "ISC",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup -c node:@bengbu/core"
+	},
+	"type": "module"
 }

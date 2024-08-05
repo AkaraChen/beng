@@ -1,17 +1,17 @@
 {
 	"name": "cjs",
-	"version": "0.0.1",
 	"description": "",
-	"main": "index.js",
-	"type": "commonjs",
-	"scripts": {
-		"build": "rollup -c node:@bengbu/core"
-	},
-	"keywords": [],
+	"version": "0.0.1",
 	"author": "",
-	"license": "ISC",
 	"dependencies": {
 		"@bengbu/core": "workspace:*",
 		"rollup": "^4.20.0"
-	}
+	},
+	"keywords": [],
+	"license": "ISC",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup -c node:@bengbu/core"
+	},
+	"type": "commonjs"
 }
