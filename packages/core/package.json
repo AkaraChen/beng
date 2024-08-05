@@ -1,6 +1,6 @@
 {
-	"name": "@beng/core",
-	"version": "1.0.0",
+	"name": "@bengbu/core",
+	"version": "0.0.1",
 	"description": "",
 	"scripts": {
 		"build": "tsup"
@@ -24,7 +24,8 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"import": "./dist/index.js"
+			"import": "./dist/index.js",
+			"require": "./dist/index.js"
 		}
 	}
 }

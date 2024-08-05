@@ -4,10 +4,11 @@ export const entryDetect: Feature = async (options, context) => {
 	let entry: string = "";
 	const files = ["index.js", "src/index.js", "index.ts", "src/index.ts"];
 	for (const file of files) {
+		console.log(file);
 		if (await context.utils.exists(file)) {
 			entry = file;
+			break;
 		}
-		break;
 	}
 	if (entry === "") {
 		throw new Error(

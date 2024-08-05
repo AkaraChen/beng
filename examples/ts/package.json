@@ -1,17 +1,17 @@
 {
 	"name": "ts",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"build": "rollup -c ./rollup.config.js"
+		"build": "rollup -c node:@bengbu/core"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@beng/core": "workspace:*",
+		"@bengbu/core": "workspace:*",
 		"rollup": "^4.20.0"
 	},
 	"devDependencies": {

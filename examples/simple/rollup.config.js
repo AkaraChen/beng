@@ -1,3 +1,3 @@
-import beng from "@beng/core";
+import beng from "@bengbu/core";
 
 export default beng;
