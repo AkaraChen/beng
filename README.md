@@ -12,20 +12,16 @@ I'm tired of configuring rollup for every project. So I made this preset.
 
 ## Usage
 
-Optional, but recommended:
+In your package root:
 
-```ts
-import { defineConfig } from '@akrc/beng'
-
-export default defineConfig({});
+```shell
+pnpx @bengbu/zhule
 ```
 
-```bash
-pnpm beng build
-```
+It will bundle your code into `dist/index.js`, and init the dependencies in `package.json`.
 
-Or you can create it with `create-beng`:
+And if you want to bundle for next time, just run:
 
-```bash
-pnpm create beng
+```shell
+pnpm beng
 ```
