@@ -1,6 +1,7 @@
 import type { Feature } from "./feature";
 
 export const summury: Feature = async (options) => {
-    options.plugins.push(require("rollup-plugin-summary")());
-    return options;
+	const { default: summary } = await import("rollup-plugin-summary");
+	options.plugins.push(summary({}));
+	return options;
 };

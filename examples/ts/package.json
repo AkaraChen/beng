@@ -1,0 +1,20 @@
+{
+	"name": "ts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"build": "rollup -c ./rollup.config.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@beng/core": "workspace:*",
+		"rollup": "^4.20.0"
+	},
+	"devDependencies": {
+		"tslib": "^2.6.3"
+	}
+}

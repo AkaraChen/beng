@@ -9,7 +9,6 @@ async function main(): Promise<RollupOptions> {
 		features,
 		{
 			plugins: [],
-			input: [],
 			output: {
 				dir: "dist",
 			},

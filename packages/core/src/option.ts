@@ -1,7 +1,10 @@
-import type { Plugin, RollupOptions } from "rollup";
+import type { ModuleFormat, Plugin } from "rollup";
 
 export type Options = {
-	input: string[];
+	input?: string;
 	plugins: Plugin[];
-	output: RollupOptions["output"];
+	output: {
+		dir: string;
+		format?: ModuleFormat;
+	};
 };

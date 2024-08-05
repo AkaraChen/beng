@@ -1,14 +1,15 @@
 import type { Feature } from "./feature";
-import type ts from "@rollup/plugin-typescript";
 
 export const typescript: Feature = async (options, context) => {
-	const tsconfig = await context.utils.file("tsconfig.json");
-	const hasTsEntry = options.input.some((input) => input.endsWith(".ts"));
-	if (tsconfig && hasTsEntry) {
-		const plugin = require("@rollup/plugin-typescript") as typeof ts;
+	const hasTsconfig = await context.utils.exists("tsconfig.json");
+	const hasTsEntry = options.input!.endsWith(".ts");
+	if (hasTsconfig && hasTsEntry) {
+		const { default: ts } = await import("@rollup/plugin-typescript");
 		options.plugins.push(
-			plugin({
+			ts({
 				declaration: true,
+				outDir: options.output.dir,
+				declarationDir: options.output.dir,
 			}),
 		);
 	}
