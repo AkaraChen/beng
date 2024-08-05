@@ -1,0 +1,24 @@
+{
+	"name": "core",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsup"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@akrc/tsconfig": "^1.0.2",
+		"rollup": "^4.20.0",
+		"tsup": "^8.2.4"
+	},
+	"dependencies": {
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"rollup-plugin-summary": "^2.0.1"
+	}
+}
