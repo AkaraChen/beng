@@ -1,7 +1,7 @@
 {
 	"name": "@bengbu/zhule",
 	"description": "The CLI of bengbu, setup your bundle with only one command.",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"author": "",
 	"bin": {
 		"beng": "./index.js"

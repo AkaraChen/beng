@@ -1,7 +1,7 @@
 {
 	"name": "@bengbu/core",
 	"description": "The core of bengbu, including rollup config resolve logic.",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"author": "",
 	"dependencies": {
 		"@rollup/plugin-commonjs": "^26.0.1",
