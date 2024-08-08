@@ -1,9 +1,9 @@
 import { execa } from "execa";
 import { ensureDependencyInstalled, detectPackageManager } from "nypm";
 
-await ensureDependencyInstalled("@bengbu/core");
-await ensureDependencyInstalled("rollup");
-await ensureDependencyInstalled("@bengbu/zhule");
+await ensureDependencyInstalled("@bengbu/core", { dev: true });
+await ensureDependencyInstalled("rollup", { dev: true });
+await ensureDependencyInstalled("@bengbu/zhule", { dev: true });
 
 let manager = await detectPackageManager(process.cwd()).then((m) => m.name);
 if (manager === undefined) {
