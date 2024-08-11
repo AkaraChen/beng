@@ -22,7 +22,7 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"import": "./dist/index.js",
-			"require": "./dist/index.js"
+			"default": "./dist/index.js"
 		}
 	},
 	"homepage": "https://github.com/akarachen/beng",
@@ -39,7 +39,8 @@
 		"directory": "packages/core"
 	},
 	"scripts": {
-		"build": "tsup"
+		"build": "tsup",
+		"dev": "tsup --watch"
 	},
 	"type": "module",
 	"types": "./dist/index.d.ts"
