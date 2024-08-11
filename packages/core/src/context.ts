@@ -16,6 +16,10 @@ export class FeatureUtils {
 	async file(filePath: string) {
 		return await fsp.readFile(this.resolve(filePath), "utf-8");
 	}
+
+	async json(filePath: string) {
+		return JSON.parse(await this.file(filePath));
+	}
 }
 
 export interface Context {
