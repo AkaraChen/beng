@@ -8,9 +8,11 @@ import { strip } from "./strip";
 import { json } from "./json";
 import { swc } from "./swc";
 import { babel } from "./babel";
+import { formatDirective } from "./format-directive";
 
 export const features: Feature[] = [
 	entryDetect,
+	formatDirective,
 	format,
 	typescript,
 	commonjs,
