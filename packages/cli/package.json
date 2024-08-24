@@ -4,20 +4,16 @@
 	"version": "0.2.0",
 	"author": "",
 	"bin": {
-		"beng": "./index.js"
+		"@bengbu/zhule": "./index.js",
+		"beng": "./build.js"
 	},
 	"dependencies": {
-		"@bengbu/core": "^0.0.1",
-		"execa": "^9.3.0",
+		"execa": "^9.3.1",
 		"nypm": "^0.3.9",
-		"rollup": "^4.20.0"
+		"write-package": "^7.1.0"
 	},
 	"homepage": "https://github.com/akarachen/beng",
-	"keywords": [
-		"beng",
-		"bengbu",
-		"rollup"
-	],
+	"keywords": ["beng", "bengbu", "rollup"],
 	"license": "ISC",
 	"licenses": [
 		{
@@ -28,9 +24,6 @@
 		"type": "git",
 		"url": "https://github.com/akarachen/beng",
 		"directory": "packages/cli"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"type": "module"
 }

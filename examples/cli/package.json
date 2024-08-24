@@ -4,8 +4,8 @@
 	"version": "0.2.0",
 	"author": "",
 	"dependencies": {
-		"@bengbu/core": "^0.0.1",
-		"@bengbu/zhule": "^0.0.1",
+		"@bengbu/core": "workspace:*",
+		"@bengbu/zhule": "workspace:*",
 		"rollup": "^4.20.0"
 	},
 	"keywords": [],
