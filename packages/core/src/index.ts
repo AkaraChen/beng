@@ -12,6 +12,7 @@ async function main(): Promise<RollupOptions | RollupOptions[]> {
 			output: {
 				dir: "dist",
 			},
+			onwarn: () => {},
 		},
 		context,
 	);

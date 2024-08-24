@@ -1,0 +1,17 @@
+{
+	"name": "format-directive",
+	"version": "1.0.0",
+	"description": "",
+	"type": "commonjs",
+	"main": "index.js",
+	"scripts": {
+		"build": "rollup -c node:@bengbu/core"
+	},
+	"dependencies": {
+		"@bengbu/core": "workspace:*",
+		"rollup": "^4.20.0"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

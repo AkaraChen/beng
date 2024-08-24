@@ -15,11 +15,7 @@
 	"homepage": "https://github.com/akarachen/beng",
 	"keywords": ["beng", "bengbu", "rollup"],
 	"license": "ISC",
-	"licenses": [
-		{
-			"type": "MIT"
-		}
-	],
+	"licenses": [{ "type": "MIT" }],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/akarachen/beng",

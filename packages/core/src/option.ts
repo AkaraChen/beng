@@ -1,4 +1,4 @@
-import type { ModuleFormat, Plugin } from "rollup";
+import type { ModuleFormat, Plugin, RollupOptions } from "rollup";
 
 export type Options = {
 	input?: string;
@@ -7,4 +7,5 @@ export type Options = {
 		dir: string;
 		format?: ModuleFormat;
 	};
+	onwarn: RollupOptions["onwarn"];
 };

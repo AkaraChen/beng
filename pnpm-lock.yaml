@@ -36,6 +36,15 @@ importers:
         specifier: ^4.20.0
         version: 4.20.0
 
+  examples/format-directive:
+    dependencies:
+      '@bengbu/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+      rollup:
+        specifier: ^4.20.0
+        version: 4.20.0
+
   examples/simple:
     dependencies:
       '@bengbu/core':
